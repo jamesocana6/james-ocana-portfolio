@@ -26,7 +26,7 @@ const ProjectPage = () => {
             github: "https://github.com/jamesocana6/bracket-maker",
             description: "Post a tournament you are hosting or join a tournament as a player.",
             technologies: "Django, Python, AWS S3, Materialize, PostgreSQL",
-            picture: "https://i.imgur.com/vLi6Bf9.png",
+            picture: "https://i.imgur.com/vLi6Bf9.png?1",
         },
         {
             project: "MyTinerary",

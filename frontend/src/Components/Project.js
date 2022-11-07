@@ -4,7 +4,7 @@ import React from "react";
 const Project = ({ projects }) => {
     let allProjects = projects.map((p, idx) => {
         return (
-            <div className="card" sx={{ margin: 1.5 }} variant="outlined" key={idx}>
+            <div className="card" style={{width: 500+"px"}} key={idx}>
                 <div class="card-image">
                     <img style={{
                         width: "auto",
