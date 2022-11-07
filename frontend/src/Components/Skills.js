@@ -70,7 +70,7 @@ const Skills = () => {
     ]
 
     return (
-        <Container>
+        <div className="container">
             <h1>Here are some technologies and tools I work with:</h1>
             <ImageList cols={6}>
                 {itemData.map((item) => (
@@ -84,7 +84,7 @@ const Skills = () => {
                     </ImageListItem>
                 ))}
             </ImageList>
-        </Container>
+        </div>
     )
 }
 
