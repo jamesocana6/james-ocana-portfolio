@@ -1,24 +1,32 @@
+import { autocompleteClasses } from "@mui/material";
 import React from "react";
-import { Card, CardContent } from '@mui/material';
 
-const Project = ({projects}) => {
+const Project = ({ projects }) => {
     let allProjects = projects.map((p, idx) => {
-        return(
-            <Card variant="outlined">
-                <CardContent>
-                    <h1>Project component</h1>
-                    Project {idx+1}
-                    {p.project}
-                    {p.link}
-                    {p.github}
+        return (
+            <div className="card" sx={{ margin: 1.5 }} variant="outlined" key={idx}>
+                <div class="card-image">
+                    <img style={{
+                        width: "auto",
+                        height: 500 + "px",
+                        marginLeft: "auto",
+                        marginRight: "auto"
+                    }} src={p.picture} />
+                </div>
+                <div className="card-content">
+                    <span class="card-title">{p.project}</span>
+                    {p.description} <br />
+                    Technologies Used:
                     {p.technologies}
-                    {p.description}
-                    {p.picture}
-                </CardContent>
-            </Card>
+                </div>
+                <div className="card-action">
+                    <a size="small" href={p.github} target="_blank">Github</a>
+                    <a size="small" href={p.link} target="_blank">Live Link</a>
+                </div>
+            </div>
         )
     })
-    return(
+    return (
         <div>
             {allProjects}
         </div>
