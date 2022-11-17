@@ -1,4 +1,4 @@
-import { Container, ImageList, ImageListItem } from "@mui/material";
+import { ImageList, ImageListItem } from "@mui/material";
 import React from "react";
 
 const Skills = () => {
@@ -71,7 +71,7 @@ const Skills = () => {
 
     return (
         <div className="container">
-            <h1>Here are some technologies and tools I work with:</h1>
+            <h3>Here are some technologies and tools I work with:</h3>
             <ImageList cols={6}>
                 {itemData.map((item) => (
                     <ImageListItem sx={{width: 60}} key={item.img}>

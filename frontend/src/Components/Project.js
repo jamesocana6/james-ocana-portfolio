@@ -4,11 +4,11 @@ import "../public/style.css"
 const Project = ({ projects }) => {
     let allProjects = projects.map((p, idx) => {
         return (
-            <div className="col s6">
+            <div className="col s6" key={idx} >
                 <div className="card large" style={{
-                                height: 550 + "px",}} key={idx}>
+                                height: 550 + "px",}}>
                     <div className="card-stacked">
-                        <div class="card-image">
+                        <div className="card-image">
                             <img style={{
                                 width: "auto",
                                 height: 300 + "px",
@@ -18,7 +18,7 @@ const Project = ({ projects }) => {
                             }} src={p.picture} />
                         </div>
                         <div className="card-content">
-                            <span class="card-title">{p.project}</span>
+                            <span className="card-title">{p.project}</span>
                             {p.description} <br />
                             <div className="project-skill-list" style={{display: "flex", flexFlow: "wrap", minHeight: "max-content" }}>
                             {p.technologies.map((tech, index) => {

@@ -1,6 +1,5 @@
 import React from "react";
 import Contact from "../Components/Contact";
-import Email from "../Components/Email";
 import Resume from "../Components/Resume";
 
 const ContactPage = () => {

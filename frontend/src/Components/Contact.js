@@ -36,10 +36,10 @@ export const Contact = () => {
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">edit</i>
                                 <textarea id="textarea1" className="materialize-textarea" name='message'></textarea>
-                                <label for="textarea1" className='active'>Message</label>
+                                <label htmlFor="textarea1" className='active'>Message</label>
                             </div>
                         </div>
-                        <button type='submit' className="waves-effect waves-light btn"><i class="material-icons left">send</i>Send</button>
+                        <button type='submit' className="waves-effect waves-light btn"><i className="material-icons left">send</i>Send</button>
                     </form>
                 </div>
             </div>

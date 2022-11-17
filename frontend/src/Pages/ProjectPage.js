@@ -47,7 +47,7 @@ const ProjectPage = () => {
 
     return(
         <div>
-            <h1>Projects</h1>
+            <h3>Projects</h3>
             <Project projects={projects}/>
         </div>
     )
