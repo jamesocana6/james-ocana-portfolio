@@ -1,3 +1,9 @@
+:root {
+    --theme-environmental-background: rgb(172, 125, 86);
+    --theme-environmental-tableheader: rgb(85, 146, 62);
+    
+}
+
 .project-skill {
     background-color: blue;
     color: white;
