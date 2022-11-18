@@ -1,4 +1,5 @@
 import React from "react";
+import Email from "../Components/Email";
 import Project from "../Components/Project";
 
 const ProjectPage = () => {
@@ -49,6 +50,7 @@ const ProjectPage = () => {
         <div>
             <h3>Projects</h3>
             <Project projects={projects}/>
+            <Email projects={projects}/>
         </div>
     )
 }
