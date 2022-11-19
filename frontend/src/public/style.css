@@ -54,36 +54,49 @@
 }
 
 /* WORK EXPERIENCE */
-.work-r-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-.work-r {
-    background-color: blue;
-    color: white;
-    margin-inline: 2px;
-    padding: 2px 5px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-.work-area {
-    background-color: brown;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3vw;
-    width: 92vw;
-}
 .work-panel {
-    background-color: green;
-    border-radius: 15px;
-    height: fit-content;
-}
-.work-company {
-    display: block;
-    font-weight: 600;
+    background-color: blue;
 }
 .work-content {
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "company location"
+    "role dates"
+    "r-list r-list";
+    width: 92vw;
+    background-color: yellow;
+} 
+.work-company {
+    grid-area: company;
+    background-color: green;
+}
+.work-role {
+    grid-area: role;
+    background-color: pink;
+}
+.work-dates {
+    grid-area: dates;
+    background-color: gray;
+}
+.work-location {
+    grid-area: location;
+    background-color: wheat;
+}
+.work-r-list {
+    grid-area: r-list;
+    display: flex;
+    flex-direction: column;
+    background-color: sandybrown;
+}
+.work-r {
+    grid-area: r;
+    background-color: brown;
+}
+.work-area {
+    background-color: purple;
+    width: 92vw;
 }
 
 /* MEDIA QUERIES */

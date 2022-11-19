@@ -23,7 +23,7 @@ const WorkExperience = ({experience}) => {
         )
     })
     return(
-        <div>
+        <div className="work-area">
             <h3>Work Experience</h3>
             {work}
         </div>
