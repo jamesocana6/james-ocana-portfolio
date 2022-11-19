@@ -5,12 +5,10 @@
 }
 
 /* PROJECT PAGE */
-
 .project-skill-list {
     display: flex;
     flex-wrap: wrap;
 }
-
 .project-skill {
     background-color: blue;
     color: white;
@@ -19,7 +17,6 @@
     border: 1px solid black;
     border-radius: 10px;
 }
-
 .project-area {
     background-color: brown;
     display: grid;
@@ -27,18 +24,15 @@
     column-gap: 3vw;
     width: 92vw;
 }
-
 .project-img {
     background-color: yellow;
     border-radius: 15px;
 }
-
 .project-panel {
     background-color: green;
     border-radius: 15px;
     height: fit-content;
 }
-
 .project-img > img {
     display: block;
     margin-left: auto;
@@ -47,21 +41,52 @@
     width: 40vw;
     object-fit: contain;
 }
-
 .project-title {
     display: block;
     font-weight: 600;
 }
-
 .project-content {
     padding: 10px;
 }
-
 .project-action {
     display: flex;
     justify-content: space-evenly;
 }
 
+/* WORK EXPERIENCE */
+.work-r-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-r {
+    background-color: blue;
+    color: white;
+    margin-inline: 2px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.work-area {
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3vw;
+    width: 92vw;
+}
+.work-panel {
+    background-color: green;
+    border-radius: 15px;
+    height: fit-content;
+}
+.work-company {
+    display: block;
+    font-weight: 600;
+}
+.work-content {
+    padding: 10px;
+}
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 641px) {
     body {
         background-color: blanchedalmond;
@@ -77,7 +102,6 @@
         font-size: small;
     }
 }
-
 @media screen and (min-width: 641px) and (max-width: 930px) {
     body {
         background-color: lightgray;
