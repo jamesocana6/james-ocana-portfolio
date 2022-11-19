@@ -72,7 +72,9 @@
     }
     .project-img > img {
         width: 92vw;
-        object-fit: contain;
+    }
+    .project-skill {
+        font-size: small;
     }
 }
 
@@ -80,5 +82,8 @@
     body {
         background-color: lightgray;
         font-size: medium;
+    }
+    .project-skill {
+        font-size: small;
     }
 }

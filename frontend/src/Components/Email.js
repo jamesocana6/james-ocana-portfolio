@@ -22,9 +22,7 @@ const Email = ({ projects }) => {
                     <div className="project-action">
                         <a href={p.github} target="_blank">Github</a>
                         <a href={p.link} target="_blank">Live Link</a>
-
                     </div>
-
                 </div>
             </div>
         )
