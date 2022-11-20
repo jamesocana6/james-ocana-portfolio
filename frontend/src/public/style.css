@@ -54,6 +54,10 @@
 }
 
 /* WORK EXPERIENCE */
+.work-header {
+    text-align: center;
+    font-size: 32px;
+}
 .work-panel {
     background-color: blue;
     padding: 10px;
@@ -65,6 +69,18 @@
     background-color: coral;
     grid-area: tabs;
     justify-content: space-evenly;
+    padding: 10px;
+    border-collapse: collapse;
+}
+.work-tab-title {
+    font-weight: 600;
+    font-size: large;
+}
+.work-tab {
+    background-color: honeydew;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .work-content {
     display: grid;

@@ -11,7 +11,7 @@ const WorkTabs = ({ experience, setTab }) => {
     })
     return (
         <div className="work-tabs">
-            <span>Work Experience</span>
+            <span className="work-tab-title">Company</span>
             {tabs}
         </div>
     )

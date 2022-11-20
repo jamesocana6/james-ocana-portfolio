@@ -27,10 +27,13 @@ const WorkSection = () => {
 
 
     return(
+        <>
+        <h3 className="work-header">Job Highlights</h3>
         <div className="work-area">
             <WorkTabs experience={experience} setTab={setTab} />
             <WorkExperience experience={experience[tab]} tab={tab}/>
         </div>
+        </>
     )
 }
 
