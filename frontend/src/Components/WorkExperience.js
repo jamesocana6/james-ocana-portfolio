@@ -1,31 +1,23 @@
 import React from "react";
 
-const WorkExperience = ({experience}) => {
-    let work = experience.map((e, idx) => {
-        return (
-            <div className="work-panel" key={"e"+idx}>
-                <div className="work-content">
-                    <span className="work-company">{e.company}</span>
-                    <span className="work-role">{e.role}</span>
-                    <span className="work-dates">{e.dates}</span>
-                    <span className="work-location">{e.location}</span>
-                    <div className="work-r-list">
-                        {e.responsibilities.map((r, index) => {
-                            return (
-                                <span className="work-r" key={"r" + index}>
-                                    {r}
-                                </span>
-                            );
-                        })}
-                    </div>
+const WorkExperience = ({ experience }) => {
+    return (
+        <div className="work-panel">
+            <div className="work-content">
+                <span className="work-company">{experience.company}</span>
+                <span className="work-role">{experience.role}</span>
+                <span className="work-dates">{experience.dates}</span>
+                <span className="work-location">{experience.location}</span>
+                <div className="work-r-list">
+                    {experience.responsibilities.map((r, index) => {
+                        return (
+                            <span className="work-r" key={"r" + index}>
+                                {r}
+                            </span>
+                        );
+                    })}
                 </div>
             </div>
-        )
-    })
-    return(
-        <div className="work-area">
-            <h3>Work Experience</h3>
-            {work}
         </div>
     )
 }

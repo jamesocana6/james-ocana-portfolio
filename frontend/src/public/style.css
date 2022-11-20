@@ -56,6 +56,15 @@
 /* WORK EXPERIENCE */
 .work-panel {
     background-color: blue;
+    padding: 10px;
+    grid-area: panel;
+}
+.work-tabs {
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    grid-area: tabs;
+    justify-content: space-evenly;
 }
 .work-content {
     display: grid;
@@ -65,24 +74,29 @@
     "company location"
     "role dates"
     "r-list r-list";
-    width: 92vw;
     background-color: yellow;
 } 
 .work-company {
     grid-area: company;
     background-color: green;
+    font-weight: 500;
+    font-size: large;
 }
 .work-role {
     grid-area: role;
     background-color: pink;
+    font-size: medium;
+    font-style: italic;
 }
 .work-dates {
     grid-area: dates;
     background-color: gray;
+    justify-self: right;
 }
 .work-location {
     grid-area: location;
     background-color: wheat;
+    justify-self: right;
 }
 .work-r-list {
     grid-area: r-list;
@@ -95,6 +109,11 @@
     background-color: brown;
 }
 .work-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "tabs panel panel panel panel";
     background-color: purple;
     width: 92vw;
 }

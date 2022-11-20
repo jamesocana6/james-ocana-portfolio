@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import WorkExperience from "./WorkExperience";
+import WorkTabs from "./WorkTabs";
 
 //USE EFFECT AND USESTATE TO MAKE WORK EXPERIENCE CLICKER
 
 const WorkSection = () => {
+    const [tab, setTab] = useState(0)
     let experience = [
         {
             company: "Underwriters' Laboratories",
@@ -25,9 +27,9 @@ const WorkSection = () => {
 
 
     return(
-        <div>
-            <h3>Work Section</h3>
-            <WorkExperience experience={experience}/>
+        <div className="work-area">
+            <WorkTabs experience={experience} setTab={setTab} />
+            <WorkExperience experience={experience[tab]} tab={tab}/>
         </div>
     )
 }
