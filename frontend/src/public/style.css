@@ -1,10 +1,73 @@
 :root {
-    --theme-env-background: rgb(172, 125, 86);
-    --theme-env-tableheader: rgb(85, 146, 62);
-    
+    --theme-default-background: rgba(157, 157, 157, 0.9);
+    --theme-default-project-hover: rgba(110, 110, 110, 0.5);
+    --theme-default-project-panels:  rgb(201, 201, 201);
+    --theme-default-table-background: rgb(201, 201, 201);
+    --theme-default-table-accent: rgb(225, 225, 225);
+    --theme-default-footer: rgba(110, 110, 110, 0.9);
+    /* ////////////////////////////////////////////////// */
+    --theme-env-background: rgba(172, 125, 86, 0.9);
+    --theme-env-project-hover: rgba(134, 98, 68, 0.5);
+    --theme-env-project-panels:  rgb(201, 201, 201);
+    --theme-env-table-background: rgb(201, 201, 201);
+    --theme-env-table-accent: rgb(225, 225, 225);
+    --theme-env-footer: url("./trees.png");
+    /* ////////////////////////////////////////////////// */
+    --theme-gam-background: rgba(0, 164, 234, 0.9);
+    --theme-gam-project-hover: rgb(134, 98, 68);
+    --theme-gam-table-background: rgb(85, 146, 62);
+    --theme-gam-footer: url("./mario.png");
+    /* ////////////////////////////////////////////////// */
+    --theme-spo-background: rgba(70, 70, 70, 0.9);
+    --theme-spo-project-hover: rgb(134, 98, 68);
+    --theme-spo-table-background: rgb(85, 146, 62); 
 }
 
-
+/* MAIN PAGE */
+.all {
+    margin-inline: 2.5rem;
+}
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-page > img {
+    height: 300px; 
+    border-radius: 150px;
+    border: 0.5px solid black;
+    box-shadow: 0px 0px 25px black;
+}
+.resume-area {
+    text-align: center;
+}
+.resume-area > a {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+h3 {
+    text-align: center;
+    font-size: 40px;
+}
+.footer {
+    position: sticky;
+    bottom: 0;
+}
+.themeSwitch {
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+.themeSwitch.env:hover {
+    background-color: var(--theme-env-background);
+}
+.themeSwitch.gam:hover {
+    background-color: var(--theme-gam-background);
+}
+.themeSwitch.spo:hover {
+    background-color: var(--theme-spo-background);
+    color: white;
+}
 
 /* PROJECT PAGE */
 .project-skill-list {
@@ -12,153 +75,218 @@
     flex-wrap: wrap;
 }
 .project-skill {
-    background-color: blue;
-    color: white;
-    margin-inline: 2px;
+    margin: 1px 2px;
     padding: 2px 5px;
-    border: 1px solid black;
+    border: 0.5px solid black;
     border-radius: 10px;
 }
 .project-area {
-    background-color: brown;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3vw;
-    width: 92vw;
-}
-.project-img {
-    background-color: yellow;
-    border-radius: 15px;
+    row-gap: 1vw;
 }
 .project-panel {
-    background-color: green;
     border-radius: 15px;
+    border: 0.5px solid black;
     height: fit-content;
+    box-shadow: 0px 0px 5px black;
+    margin-bottom: 10px;
+    width: 45vw;
 }
 .project-img > img {
     display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     max-height: 300px;
-    width: 40vw;
     object-fit: contain;
+    width: 45vw;
 }
 .project-title {
     display: block;
     font-weight: 600;
 }
 .project-content {
-    padding: 10px;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 .project-action {
     display: flex;
-    justify-content: space-evenly;
+    margin-top: 10px;
+    border-top: 1px solid black;
+    justify-content: space-around;
+}
+.project-action > a {
+    color: black;
+    font-size: 20px;
+    margin: 0;
+    padding: 0.5rem 3rem;
 }
 
 /* WORK EXPERIENCE */
-.work-header {
-    text-align: center;
-    font-size: 32px;
-}
 .work-panel {
-    background-color: fuchsia;
-    padding: 10px;
+    padding: 5px 5px 5px 5px;
     grid-area: panel;
+    border-radius: 10px;
 }
 .work-tabs {
     display: flex;
     flex-direction: column;
-    background-color: coral;
     grid-area: tabs;
     justify-content: space-evenly;
     padding: 10px;
     border-collapse: collapse;
+    border-radius: 10px;
 }
 .work-tab-title {
     font-weight: 600;
     font-size: large;
 }
 .work-tab {
-    background-color: honeydew;
     padding: 10px;
     border-top: 1px solid black;
+}
+.work-tab:last-child {
     border-bottom: 1px solid black;
 }
 .work-content {
     display: grid;
-    padding: 10px;
+    padding: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "company location"
     "role dates"
     "r-list r-list";
-    background-color: yellow;
 } 
 .work-company {
     grid-area: company;
-    background-color: green;
     font-weight: 500;
     font-size: large;
 }
 .work-role {
     grid-area: role;
-    background-color: pink;
     font-size: medium;
     font-style: italic;
 }
 .work-dates {
     grid-area: dates;
-    background-color: gray;
     justify-self: right;
 }
 .work-location {
     grid-area: location;
-    background-color: wheat;
     justify-self: right;
 }
 .work-r-list {
+    padding: 5px;
     grid-area: r-list;
     display: flex;
     flex-direction: column;
-    background-color: sandybrown;
 }
 .work-r {
     grid-area: r;
-    background-color: brown;
 }
 .work-area {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "tabs panel panel panel panel";
-    background-color: purple;
-    width: 92vw;
+    "tabs tabs panel panel panel panel panel";
 }
+
+/* ////// */
+/* THEMES */
+/* ////// */
+
+/* DEFAULT */
+/* PROJECT PAGE */
+.project-skill {
+    background-color: lightseagreen;
+    color: white;
+}
+.project-panel {
+    background-image: var(--theme-default-project-panels);
+    background-size: cover;
+    box-shadow: 0px 0px 5px black;
+}
+.project-content {
+    background-color: var(--theme-default-table-accent);
+}
+.project-action > a:hover {
+    background-color: var(--theme-default-table-background);
+    box-shadow: inset 10px 0px 5px var(--theme-default-table-accent), inset -10px 0px 5px var(--theme-default-table-accent);
+    color: white;
+}
+.footer {
+    background: var(--theme-default-footer);
+    background-size: contain;
+    background-repeat: round;
+    height: 80px;
+}
+/* WORK EXPERIENCE */
+.work-panel {
+    background-color: var(--theme-default-table-background);
+}
+.work-tabs {
+    background-color: var(--theme-default-table-accent);
+}
+.work-tab:hover {
+    background-color: var(--theme-default-table-background);
+    box-shadow: inset 10px 0px 5px var(--theme-default-table-accent), inset -10px 0px 5px var(--theme-default-table-accent);
+}
+.work-r-list {
+    background-color: var(--theme-default-table-accent);
+}
+
 
 /* ENV */
 h3.env {
     font-family: 'Courier New', Courier, monospace;
 }
 body.env {
-    background-color: var(--theme-env-background);
+    background: rgb(145,145,145);
+    background: linear-gradient(56deg, rgba(145,145,145,1) 0%, rgba(34,19,54,1) 100%);
+    /* background-color: var(--theme-env-background); */
 }
 .project-skill.env {
     background-color: blue;
     color: white;
 }
 .project-area.env {
-    background-color: var(--theme-env-tableheader);
-}
-.project-img.env {
-    background-color: yellow;
+    background-color: var(--theme-env-table-background);
 }
 .project-panel.env {
-    background-color: green;
+    background-color: var(--theme-env-table-background);
+}
+.footer.env {
+    background: var(--theme-env-footer), -75px var(--theme-env-footer);
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 100px;
 }
 
+/* GAM */
+body.gam {
+    background: var(--theme-gam-background);
+}
+.footer.gam {
+    background: var(--theme-gam-footer);
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 100px;
+}
+
+/* ///////////// */
 /* MEDIA QUERIES */
+/* ///////////// */
+
 @media screen and (max-width: 641px) {
     body {
         background-color: blanchedalmond;
@@ -166,9 +294,6 @@ body.env {
     }
     .project-area {
         grid-template-columns: 1fr;
-    }
-    .project-img > img {
-        width: 92vw;
     }
     .project-skill {
         font-size: small;
