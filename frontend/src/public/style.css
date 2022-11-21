@@ -1,8 +1,10 @@
 :root {
-    --theme-environmental-background: rgb(172, 125, 86);
-    --theme-environmental-tableheader: rgb(85, 146, 62);
+    --theme-env-background: rgb(172, 125, 86);
+    --theme-env-tableheader: rgb(85, 146, 62);
     
 }
+
+
 
 /* PROJECT PAGE */
 .project-skill-list {
@@ -84,6 +86,7 @@
 }
 .work-content {
     display: grid;
+    padding: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -132,6 +135,27 @@
     "tabs panel panel panel panel";
     background-color: purple;
     width: 92vw;
+}
+
+/* ENV */
+h3.env {
+    font-family: 'Courier New', Courier, monospace;
+}
+body.env {
+    background-color: var(--theme-env-background);
+}
+.project-skill.env {
+    background-color: blue;
+    color: white;
+}
+.project-area.env {
+    background-color: var(--theme-env-tableheader);
+}
+.project-img.env {
+    background-color: yellow;
+}
+.project-panel.env {
+    background-color: green;
 }
 
 /* MEDIA QUERIES */

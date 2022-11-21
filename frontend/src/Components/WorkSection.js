@@ -25,7 +25,6 @@ const WorkSection = () => {
         },
     ]
 
-
     return(
         <>
         <h3 className="work-header">Job Highlights</h3>
