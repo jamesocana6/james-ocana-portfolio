@@ -6,6 +6,15 @@ const ThemeSwitch = () => {
         console.log(elements);
         console.log(event.target.innerText.substring(0,3));
         elements.forEach(element => {
+            if (element.classList.contains("env")) {
+                element.classList.remove("env")
+            }
+            if (element.classList.contains("gam")) {
+                element.classList.remove("gam")
+            }
+            if (element.classList.contains("spo")) {
+                element.classList.remove("spo")
+            }
             console.log(element)
             element.classList.add(event.target.innerText.substring(0,3));
         });
