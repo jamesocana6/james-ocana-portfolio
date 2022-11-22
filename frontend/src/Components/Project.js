@@ -9,6 +9,7 @@ const Project = ({ projects }) => {
                 </div>
                 <div className="project-content env">
                     <span className="project-title env">{p.project}</span>
+                    <div className="project-description">
                     {p.description} <br />
                     <div className="project-skill-list env">
                         {p.technologies.map((tech, index) => {
@@ -22,6 +23,7 @@ const Project = ({ projects }) => {
                     <div className="project-action env">
                         <a href={p.github} target="_blank">Github</a>
                         <a href={p.link} target="_blank">Live Link</a>
+                    </div>
                     </div>
                 </div>
             </div>

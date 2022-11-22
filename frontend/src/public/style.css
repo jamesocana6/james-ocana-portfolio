@@ -1,5 +1,5 @@
 :root {
-    --theme-env-background: linear-gradient(56deg, rgba(145,145,145,1) 0%, rgb(19, 54, 22) 100%);
+    --theme-env-background: linear-gradient(45deg, rgba(145,145,145, 0.9) 0%, rgba(19, 54, 22, .9) 100%);
     --theme-env-project-hover: rgba(134, 98, 68, 0.5);
     --theme-env-project-panels:  rgb(70, 70, 70);
     --theme-env-table-background: rgb(70, 70, 70);
@@ -47,6 +47,10 @@
     70% {translate: -10vw 0}
     100% {translate: -20vw 0}
 } 
+@keyframes hoverPanel {
+    0% {translate: 0 100%;}
+    100% {translate: 0 0px;}
+}
 
 /* OVERLAYS */
 .footer {
@@ -147,7 +151,7 @@ h3 {
 }
 .themeSwitch > .env:hover {
     cursor: pointer;
-    background-color: var(--theme-env-background);
+    background: var(--theme-env-background);
 }
 .themeSwitch > .gam:hover {
     cursor: pointer;
@@ -177,12 +181,14 @@ h3 {
     row-gap: 1vw;
 }
 .project-panel {
+    position: relative;
     border-radius: 15px;
     border: 0.5px solid black;
     height: fit-content;
     box-shadow: 0px 0px 5px black;
     margin-bottom: 10px;
     width: 34vw;
+    overflow: hidden;
 }
 .project-img > img {
     display: block;
@@ -197,12 +203,26 @@ h3 {
 .project-title {
     display: block;
     font-weight: 600;
+    text-align: center;
+}
+.project-panel:hover > .project-content > .project-description {
+    display: unset;
+}
+.project-panel:hover > .project-content {
+    animation: hoverPanel 0.3s ease-out 1;
 }
 .project-content {
+    position: absolute;
+    background-color: gray;
     border-radius: 15px;
     padding-top: 5px;
     padding-right: 10px;
     padding-left: 10px;
+    bottom: 0;
+    width: 100%;
+}
+.project-description {
+    display: none;
 }
 .project-action {
     display: flex;
