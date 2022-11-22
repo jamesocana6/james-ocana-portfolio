@@ -9,9 +9,10 @@ const ThemeSwitch = () => {
         let footer = document.querySelectorAll("div.footer");
         let body = document.querySelectorAll("body");
         let floating = document.querySelectorAll("div.floating");
-        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating]
+        let navbar = document.querySelectorAll("div#nav-bar");
+        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating, ...navbar]
         console.log(elements);
-        console.log(event.target.innerText.substring(0,3));
+        console.log(event.target.classList[1]);
         elements.forEach(element => {
             if (element.classList.contains("env")) {
                 element.classList.remove("env");
@@ -22,16 +23,17 @@ const ThemeSwitch = () => {
             if (element.classList.contains("spo")) {
                 element.classList.remove("spo");
             }
-            element.classList.add(event.target.innerText.substring(0,3));
+            element.classList.add(event.target.classList[1]);
         });
     }
 
     return(
         <div>
-            <ul className="themeSwitch" onClick={handleClick}>I am a: (click on the word to change the theme)
-                <li className="themeSwitch env">environmentalist</li>
-                <li className="themeSwitch gam">gamer</li>
-                <li className="themeSwitch spo">sports fan</li>
+            <ul className="themeSwitch" onClick={handleClick}>OUTSIDE OF CODING, I ENJOY: <span className="shake">(CLICK ON ONE OF THE WORDS!!)</span>
+                <li className="themeSwitch env">NATURE</li>
+                <li className="themeSwitch gam">VIDEO GAMES</li>
+                <li className="themeSwitch spo">SPORTS</li>
+                <li className="themeSwitch coo">COOKING</li>
             </ul>
         </div>
     )

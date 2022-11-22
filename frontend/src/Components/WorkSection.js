@@ -51,7 +51,7 @@ const WorkSection = () => {
 
     return(
         <>
-        <h3 className="work-header env">Job Highlights</h3>
+        <h3 className="work-header env">Work Experience</h3>
         <div className="work-area env">
             <WorkTabs experience={experience} setTab={setTab} />
             <WorkExperience experience={experience[tab]} tab={tab}/>

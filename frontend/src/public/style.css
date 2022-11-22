@@ -1,5 +1,5 @@
 :root {
-    --theme-env-background: linear-gradient(45deg, rgba(145,145,145, 0.9) 0%, rgba(19, 54, 22, .9) 100%);
+    --theme-env-background: linear-gradient(45deg, rgba(95, 125, 95, 0.9) 0%, rgba(19, 54, 22, .9) 100%);
     --theme-env-project-hover: rgba(134, 98, 68, 0.5);
     --theme-env-project-panels:  rgb(70, 70, 70);
     --theme-env-table-background: rgb(70, 70, 70);
@@ -105,9 +105,6 @@
     font-weight: 600;
     padding: 7px;
 }
-#nav-bar > a:hover {
-    background: linear-gradient(90deg, rgba(157, 157, 157, 0) 0%, rgba(100, 100, 100, 0.5) 30%, rgba(100, 100, 100, 0.5) 70%, rgba(157, 157, 157, 0) 100%);
-}
 .themeSwitch {
     margin: 2px;
     padding: 2px;
@@ -149,15 +146,15 @@ h3 {
     text-align: center;
     font-size: 40px;
 }
-.themeSwitch > .env:hover {
+.themeSwitch > .env {
     cursor: pointer;
-    background: var(--theme-env-background);
+    background: linear-gradient(56deg,rgba(87,168,255,1) 0%, rgba(19,60,120,.75) 50%, rgba(38, 6, 88, .75) 100%);
 }
-.themeSwitch > .gam:hover {
+.themeSwitch > .gam {
     cursor: pointer;
     background-color: var(--theme-gam-background);
 }
-.themeSwitch > .spo:hover {
+.themeSwitch > .spo {
     cursor: pointer;
     background-color: var(--theme-spo-background);
     color: white;
@@ -231,7 +228,7 @@ h3 {
     justify-content: space-around;
 }
 .project-action > a {
-    color: black;
+    color: white;
     font-size: 20px;
     margin: 0;
     padding: 0.5rem 3rem;
@@ -334,8 +331,8 @@ h3 {
     top: 55%;
     animation: floatMove 15s linear infinite, birdFlap 1s linear infinite alternate;
 }
-h3.env {
-    font-family: 'Courier New', Courier, monospace;
+#nav-bar.env > a:hover {
+    background: linear-gradient(90deg, rgba(157, 157, 157, 0) 0%, rgba(19, 54, 22, .5) 30%, rgba(19, 54, 22, .5) 70%, rgba(157, 157, 157, 0) 100%);
 }
 body.env {
     background: linear-gradient(56deg, rgba(87,205,255,1) 20%, rgba(87,168,255,1) 40%, rgba(19,60,120,1) 50%, rgb(38, 6, 88) 60%, rgb(25, 5, 44) 70%);    
@@ -348,11 +345,11 @@ body.env {
     background-color: blue;
     color: white;
 }
-.project-area.env {
-    background-color: var(--theme-env-table-background);
-}
 .project-panel.env {
-    background-color: var(--theme-env-table-background);
+    background-color: rgba(157, 157, 157, 0.9);
+}
+.project-content.env {
+    background: var(--theme-env-background);
 }
 .footer.env {
     animation: themeChangeFooter 3s ease 1;
