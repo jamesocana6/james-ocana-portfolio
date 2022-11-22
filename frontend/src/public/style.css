@@ -37,6 +37,16 @@
     0% {translate: 0px -150px}
     100% {translate: 0 0}
 } 
+@keyframes birdFlap {
+    0% {background-image: url("./bird2.png")}
+    50% {background-image: url("./bird2.png")}
+    100% {background-image: url("./bird1.png")}
+} 
+@keyframes floatMove {
+    0% {translate: 103vw 0}
+    90% {translate: 0vw 0}
+    100% {translate: -10vw 0}
+} 
 
 /* OVERLAYS */
 .footer {
@@ -56,7 +66,7 @@
     left: 1%;
     width: 75px;
     height: 125px;
-    background-color: rgba(157, 157, 157, 0.5);
+    background-color: rgba(157, 157, 157, 0.9);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(52, 52, 52, 0.9);
 }
@@ -98,6 +108,14 @@
     margin: 2px;
     padding: 2px;
     font-size: large;
+}
+.floating1, .floating2, .floating3 {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;   
 }
 
 /* MAIN PAGE */
@@ -278,6 +296,24 @@ h3 {
 /* ////// */
 
 /* ENV */
+.floating1.env, .floating2.env, .floating3.env {
+    background-image: url("./bird1.png"); 
+}
+.floating1.env {
+    left: 0;
+    top: 50%;
+    animation: floatMove 15s 2s linear infinite, birdFlap 1s 2.5s linear infinite alternate;
+}
+.floating2.env {
+    left: 0;
+    top: 45%;
+    animation: floatMove 15s 1s linear infinite, birdFlap 1s 0.25s linear infinite alternate;
+}
+.floating3.env {
+    left: 0;
+    top: 55%;
+    animation: floatMove 15s linear infinite, birdFlap 1s linear infinite alternate;
+}
 h3.env {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -313,10 +349,28 @@ body.gam {
 }
 .footer.gam {
     background: var(--theme-gam-footer);
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-x;
     height: 150px;
-    translate: 0 10px;
+    translate: 0 20px;
+}
+.floating1.gam {
+    background-image: url("./cloud1.png"); 
+    left: 0;
+    top: 50%;
+    animation: floatMove 15s 2s linear infinite;
+}
+.floating2.gam {
+    background-image: url("./cloud2.png"); 
+    left: 0;
+    top: 45%;
+    animation: floatMove 15s 1s linear infinite;
+}
+.floating3.gam {
+    background-image: url("./cloud3.png"); 
+    left: 0;
+    top: 55%;
+    animation: floatMove 15s linear infinite;
 }
 
 /* ///////////// */

@@ -8,7 +8,8 @@ const ThemeSwitch = () => {
         let projectSkill = document.querySelectorAll("div.project-skill");
         let footer = document.querySelectorAll("div.footer");
         let body = document.querySelectorAll("body");
-        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer]
+        let floating = document.querySelectorAll("div.floating");
+        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating]
         console.log(elements);
         console.log(event.target.innerText.substring(0,3));
         elements.forEach(element => {
