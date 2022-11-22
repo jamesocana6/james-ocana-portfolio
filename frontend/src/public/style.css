@@ -29,6 +29,10 @@
     0% {translate: 0 100px}
     100% {translate: 0 0px}
 } 
+@keyframes themeChangeLeftBox {
+    0% {translate: -150px 0}
+    100% {translate: 0 0}
+} 
 
 /* MAIN PAGE */
 .all {
@@ -61,6 +65,7 @@ h3 {
     bottom: 0;
 }
 .left-box {
+    animation: themeChangeLeftBox 3s ease 1;
     position: fixed;
     display: flex;
     flex-direction: column;
