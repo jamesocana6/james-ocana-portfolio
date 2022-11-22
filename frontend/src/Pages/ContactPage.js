@@ -4,7 +4,7 @@ import Resume from "../Components/Resume";
 
 const ContactPage = () => {
     return(
-        <div>
+        <div id="contact-page">
             <h3>Reach out to me!</h3>
             <Contact/>
             <Resume/>

@@ -46,7 +46,7 @@ const ProjectPage = () => {
     ]
 
     return(
-        <div>
+        <div id="projects-page">
             <h3>Projects</h3>
             <Project projects={projects}/>
         </div>
