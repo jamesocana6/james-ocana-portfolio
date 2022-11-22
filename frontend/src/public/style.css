@@ -1,16 +1,9 @@
 :root {
-    --theme-default-background: rgba(157, 157, 157, 0.9);
-    --theme-default-project-hover: rgba(110, 110, 110, 0.5);
-    --theme-default-project-panels:  rgb(201, 201, 201);
-    --theme-default-table-background: rgb(201, 201, 201);
-    --theme-default-table-accent: rgb(225, 225, 225);
-    --theme-default-footer: rgba(110, 110, 110, 0.9);
-    /* ////////////////////////////////////////////////// */
-    --theme-env-background: rgba(172, 125, 86, 0.9);
+    --theme-env-background: linear-gradient(56deg, rgba(145,145,145,1) 0%, rgb(19, 54, 22) 100%);
     --theme-env-project-hover: rgba(134, 98, 68, 0.5);
-    --theme-env-project-panels:  rgb(201, 201, 201);
-    --theme-env-table-background: rgb(201, 201, 201);
-    --theme-env-table-accent: rgb(225, 225, 225);
+    --theme-env-project-panels:  rgb(70, 70, 70);
+    --theme-env-table-background: rgb(70, 70, 70);
+    --theme-env-table-accent: rgb(60, 60, 60);
     --theme-env-footer: url("./trees.png");
     /* ////////////////////////////////////////////////// */
     --theme-gam-background: rgba(0, 164, 234, 0.9);
@@ -22,6 +15,20 @@
     --theme-spo-project-hover: rgb(134, 98, 68);
     --theme-spo-table-background: rgb(85, 146, 62); 
 }
+
+@keyframes themeChangeBackground {
+    0% {background-position: 0% 0%}
+    50% {background-position: 50% 50%;}
+    100% {background-position: 100% 100%;}
+} 
+@keyframes themeChangeFont {
+    0% {color: black}
+    100% {color: white}
+} 
+@keyframes themeChangeFooter {
+    0% {translate: 0 100px}
+    100% {translate: 0 0px}
+} 
 
 /* MAIN PAGE */
 .all {
@@ -53,18 +60,42 @@ h3 {
     position: sticky;
     bottom: 0;
 }
+.left-box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 40%;
+    left: 1%;
+    width: 75px;
+    height: 125px;
+    background-color: rgba(157, 157, 157, 0.5);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(52, 52, 52, 0.9);
+}
+.left-box > a > img {
+    width: 50px;
+}
+.left-box > a > img:hover {
+    width: 55px;
+    cursor: pointer;
+}
 .themeSwitch {
     margin: 2px;
     padding: 2px;
-    cursor: pointer;
+    font-size: large;
 }
-.themeSwitch.env:hover {
+.themeSwitch > .env:hover {
+    cursor: pointer;
     background-color: var(--theme-env-background);
 }
-.themeSwitch.gam:hover {
+.themeSwitch > .gam:hover {
+    cursor: pointer;
     background-color: var(--theme-gam-background);
 }
-.themeSwitch.spo:hover {
+.themeSwitch > .spo:hover {
+    cursor: pointer;
     background-color: var(--theme-spo-background);
     color: white;
 }
@@ -205,55 +236,16 @@ h3 {
 /* THEMES */
 /* ////// */
 
-/* DEFAULT */
-/* PROJECT PAGE */
-.project-skill {
-    background-color: lightseagreen;
-    color: white;
-}
-.project-panel {
-    background-image: var(--theme-default-project-panels);
-    background-size: cover;
-    box-shadow: 0px 0px 5px black;
-}
-.project-content {
-    background-color: var(--theme-default-table-accent);
-}
-.project-action > a:hover {
-    background-color: var(--theme-default-table-background);
-    box-shadow: inset 10px 0px 5px var(--theme-default-table-accent), inset -10px 0px 5px var(--theme-default-table-accent);
-    color: white;
-}
-.footer {
-    background: var(--theme-default-footer);
-    background-size: contain;
-    background-repeat: round;
-    height: 80px;
-}
-/* WORK EXPERIENCE */
-.work-panel {
-    background-color: var(--theme-default-table-background);
-}
-.work-tabs {
-    background-color: var(--theme-default-table-accent);
-}
-.work-tab:hover {
-    background-color: var(--theme-default-table-background);
-    box-shadow: inset 10px 0px 5px var(--theme-default-table-accent), inset -10px 0px 5px var(--theme-default-table-accent);
-}
-.work-r-list {
-    background-color: var(--theme-default-table-accent);
-}
-
-
 /* ENV */
 h3.env {
     font-family: 'Courier New', Courier, monospace;
 }
 body.env {
-    background: rgb(145,145,145);
-    background: linear-gradient(56deg, rgba(145,145,145,1) 0%, rgba(34,19,54,1) 100%);
-    /* background-color: var(--theme-env-background); */
+    background: linear-gradient(56deg, rgba(87,205,255,1) 20%, rgba(87,168,255,1) 40%, rgba(19,60,120,1) 50%, rgb(38, 6, 88) 60%, rgb(25, 5, 44) 70%);    
+    background-size: 500% 500%;
+    color: white;
+    animation: themeChangeBackground 15s ease infinite alternate, themeChangeFont 3s ease 1;
+    height: 100hv;
 }
 .project-skill.env {
     background-color: blue;
@@ -266,6 +258,7 @@ body.env {
     background-color: var(--theme-env-table-background);
 }
 .footer.env {
+    animation: themeChangeFooter 3s ease 1;
     background: var(--theme-env-footer), -75px var(--theme-env-footer);
     background-size: contain;
     background-repeat: repeat-x;

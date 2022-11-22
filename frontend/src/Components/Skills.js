@@ -70,7 +70,7 @@ const Skills = () => {
     ]
 
     return (
-        <div className="container">
+        <div className="container env">
             <h3>Here are some technologies and tools I work with:</h3>
             <ImageList cols={6}>
                 {itemData.map((item) => (

@@ -17,7 +17,7 @@ export const Contact = () => {
 
     return (
         <div>
-            <div className='card' style={{ padding: 10 + "px" }}>
+            <div className='card env' style={{ padding: 10 + "px" }}>
                 <div className='row'>
                     <form className='col s12' ref={form} onSubmit={sendEmail}>
                         <div className='row'>

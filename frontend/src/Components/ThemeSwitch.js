@@ -27,7 +27,7 @@ const ThemeSwitch = () => {
 
     return(
         <div>
-            <ul onClick={handleClick}>I am a: (click on the word to change the theme)
+            <ul className="themeSwitch" onClick={handleClick}>I am a: (click on the word to change the theme)
                 <li className="themeSwitch env">environmentalist</li>
                 <li className="themeSwitch gam">gamer</li>
                 <li className="themeSwitch spo">sports fan</li>
