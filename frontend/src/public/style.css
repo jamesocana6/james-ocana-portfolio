@@ -9,7 +9,7 @@
     --theme-gam-background: rgba(0, 164, 234, 0.9);
     --theme-gam-project-hover: rgb(134, 98, 68);
     --theme-gam-table-background: rgb(85, 146, 62);
-    --theme-gam-footer: url("./mario-no-clouds.png");
+    --theme-gam-footer: url("./mario-map.png");
     /* ////////////////////////////////////////////////// */
     --theme-spo-background: rgba(70, 70, 70, 0.9);
     --theme-spo-project-hover: rgb(134, 98, 68);
@@ -108,6 +108,7 @@
 .themeSwitch {
     margin: 2px;
     padding: 2px;
+    text-align: center;
     font-size: large;
 }
 .floating1, .floating2, .floating3 {
@@ -241,7 +242,8 @@ h3 {
 .work-panel {
     padding: 5px 5px 5px 5px;
     grid-area: panel;
-    border-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .work-tabs {
     display: flex;
@@ -250,11 +252,13 @@ h3 {
     justify-content: space-evenly;
     padding: 10px;
     border-collapse: collapse;
-    border-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .work-tab-title {
     font-weight: 600;
     font-size: large;
+    text-align: center;
 }
 .work-tab {
     padding: 10px;
@@ -276,11 +280,11 @@ h3 {
 .work-company {
     grid-area: company;
     font-weight: 500;
-    font-size: large;
+    font-size: 20px;
 }
 .work-role {
     grid-area: role;
-    font-size: medium;
+    font-size: 16px;
     font-style: italic;
 }
 .work-dates {
@@ -344,6 +348,17 @@ body.env {
     animation: themeChangeBackground 15s ease infinite alternate, themeChangeFont 3s ease 1;
     height: 100hv;
 }
+.work-panel {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(1,1,1,0.5);
+}
+.work-tabs {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(1,1,1,0.5);
+}
+.work-tab:hover {
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0) 0%, rgba(19, 54, 22, .5) 30%, rgba(19, 54, 22, .5) 70%, rgba(200, 200, 200, 0) 100%);
+}
 .project-action.env > a:hover {
     background: linear-gradient(90deg, rgba(200, 200, 200, 0) 0%, rgba(19, 54, 22, .5) 30%, rgba(19, 54, 22, .5) 70%, rgba(200, 200, 200, 0) 100%);
 }
@@ -380,18 +395,24 @@ body.gam {
 .floating1.gam {
     background-image: url("./cloud1.png"); 
     left: 0;
+    height: 100px;
+    width: 100px;
     top: 50%;
     animation: floatMove 15s 2s linear infinite;
 }
 .floating2.gam {
     background-image: url("./cloud2.png"); 
     left: 0;
+    height: 100px;
+    width: 100px;
     top: 45%;
     animation: floatMove 15s 1s linear infinite;
 }
 .floating3.gam {
     background-image: url("./cloud3.png"); 
     left: 0;
+    height: 100px;
+    width: 100px;
     top: 55%;
     animation: floatMove 15s linear infinite;
 }

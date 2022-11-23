@@ -37,10 +37,10 @@ const WorkSection = () => {
             dates: "April 2019 - December 2019",
             location: "Parsippany, NJ",
             responsibilities: [
-                `- Worked closely with the Quality Engineer to perform FAT and LAT testing for Department of Defense contract.`,
-                `- Researched automation processes for manufacturing to increase the volume of production and reduce error.`,
+                `- Worked closely with the Quality Engineer to perform FAT and LAT testing on molded parts for Department of Defense contract.`,
+                `- Researched automation processes for manufacturing to increase the volume of production and reduce chance of human error.`,
                 `- Designed fixtures and cutting procedures on a 4-Axis CNC milling machine using CAMWorks, AutoCAD, and G-Code.`,
-                `- Manufactured and tested injection molding parameters for polymer cartridges and compression molded shields.`,
+                `- Manufactured and tested injection molding parameters for production of polymer cartridges and compression molded shields.`,
                 `- Performed maintenance and inspections on injection molding, compression molding, CNC machines, and cooling units.`, 
             ]
         },
@@ -52,6 +52,7 @@ const WorkSection = () => {
             responsibilities: [
                 `- Programmed controllers to correct the feed rates of chemicals into cooling tower systems to reduce corrosion within the pipes and equipment and ensuring that the systems are in compliance with EHS requirements.`,
                 `- Instructed building engineers and facilities engineers on how to maintain their cooling water systems with a Maintenance Program and Plan (Maintenance Manual).`, 
+                `- Performed routine maintenance inspections on client cooling towers.`, 
             ]
         },
         {
@@ -62,6 +63,7 @@ const WorkSection = () => {
             responsibilities: [
                 `- Shadowed engineers as they serviced cooling towers and observed the communication between facilities staff.`,
                 `- Constructed and organized documentation and certificates for clients’ cooling towers`, 
+                `- Cleaned office files and computer documentation to reduce clutter.`, 
             ]
         },
     ]
