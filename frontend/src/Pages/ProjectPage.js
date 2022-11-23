@@ -23,7 +23,7 @@ const ProjectPage = () => {
             project: "Tourney Board",
             link: "https://tourneyboard.herokuapp.com/tournament/",
             github: "https://github.com/jamesocana6/bracket-maker",
-            description: "Post a tournament you are hosting or join a tournament as a player.",
+            description: "Django app where you can post a tournament you are host or join a tournament as a player.",
             technologies: ["Django", "Python", "AWS S3", "Materialize", "PostgreSQL"],
             picture: "https://i.imgur.com/vLi6Bf9.png?1",
         },
@@ -31,7 +31,7 @@ const ProjectPage = () => {
             project: "MyTinerary",
             link: "https://floating-plateau-88049.herokuapp.com/home",
             github: "https://github.com/jamesocana6/mytinerary",
-            description: "Social media travel app where you can rate your past trips and see other people's trips.",
+            description: "EJS, Express, and Node.js app for social media travel app where you can rate your past trips and see other people's trips.",
             technologies: ["Node", "Express", "EJS", "JavaScript", "NoSQL", "MongoDB", "Materialize", "CSS", "HTML"],
             picture: "https://i.imgur.com/hY0yyLd.jpg",
         },
@@ -39,7 +39,7 @@ const ProjectPage = () => {
             project: "Tasks",
             link: "https://jamesocana6.github.io/tasks-project/",
             github: "https://github.com/jamesocana6/tasks-project",
-            description: "To do list app that has motivational quotes that you can save.",
+            description: "JS, HTML, and CSS to do list app that has motivational quotes that you can save.",
             technologies: ["JavaScript", "CSS", "HTML"],
             picture: "https://i.imgur.com/AmRlqif.png",
         },
@@ -47,7 +47,7 @@ const ProjectPage = () => {
 
     return(
         <div id="projects-page">
-            <h3>Projects</h3>
+            <h3>MY PROJECTS</h3>
             <Project projects={projects}/>
         </div>
     )

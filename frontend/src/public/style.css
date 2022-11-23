@@ -159,6 +159,9 @@ h3 {
     background-color: var(--theme-spo-background);
     color: white;
 }
+.contact-page {
+    text-align: center;
+}
 
 /* PROJECT PAGE */
 .project-skill-list {
@@ -200,6 +203,7 @@ h3 {
 .project-title {
     display: block;
     font-weight: 600;
+    font-size: 20px;
     text-align: center;
 }
 .project-panel:hover > .project-content > .project-description {
@@ -210,7 +214,6 @@ h3 {
 }
 .project-content {
     position: absolute;
-    background-color: gray;
     border-radius: 15px;
     padding-top: 5px;
     padding-right: 10px;
@@ -341,15 +344,18 @@ body.env {
     animation: themeChangeBackground 15s ease infinite alternate, themeChangeFont 3s ease 1;
     height: 100hv;
 }
+.project-action.env > a:hover {
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0) 0%, rgba(19, 54, 22, .5) 30%, rgba(19, 54, 22, .5) 70%, rgba(200, 200, 200, 0) 100%);
+}
 .project-skill.env {
-    background-color: blue;
+    background: var(--theme-env-background);
     color: white;
 }
 .project-panel.env {
-    background-color: rgba(157, 157, 157, 0.9);
+    background: linear-gradient(90deg, rgba(214, 214, 214, 0.1) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.5) 70%, rgba(214, 214, 214, 0.1) 100%);
 }
 .project-content.env {
-    background: var(--theme-env-background);
+    background: linear-gradient(90deg, rgba(100, 100, 100, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(100, 100, 100, 0.5) 100%);
 }
 .footer.env {
     animation: themeChangeFooter 3s ease 1;
