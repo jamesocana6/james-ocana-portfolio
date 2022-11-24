@@ -17,25 +17,25 @@ export const Contact = () => {
 
     return (
         <div>
-            <div className='card env' style={{ padding: 10 + "px" }}>
+            <div className='card env'>
                 <div className='row'>
                     <form className='col s12' ref={form} onSubmit={sendEmail}>
                         <div className='row'>
                             <div className="input-field col s6">
                                 <i className="material-icons prefix">account_circle</i>
                                 <label htmlFor="icon_prefix" className='active'>Name</label>
-                                <input id="icon_prefix" type="text" name='user_name' />
+                                <input id="icon_prefix" type="text" name='user_name' required/>
                             </div>
                             <div className="input-field col s6">
                                 <i className="material-icons prefix">email</i>
                                 <label htmlFor="icon_prefix" className='active'>Email</label>
-                                <input id="icon_prefix" type="email" name='user_email'/>
+                                <input id="icon_prefix" type="email" name='user_email' required/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">edit</i>
-                                <textarea id="textarea1" className="materialize-textarea" name='message'></textarea>
+                                <textarea id="textarea1" className="materialize-textarea" name='message' required></textarea>
                                 <label htmlFor="textarea1" className='active'>Message</label>
                             </div>
                         </div>

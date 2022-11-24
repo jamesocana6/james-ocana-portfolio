@@ -314,6 +314,17 @@ h3 {
     grid-template-areas: 
     "tabs tabs panel panel panel panel panel";
 }
+.card {
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+.input-field {
+    margin: 5px 0px;
+}
+.input-field > i {
+    color: black;
+}
 
 /* ////// */
 /* THEMES */
