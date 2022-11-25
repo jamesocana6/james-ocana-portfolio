@@ -71,7 +71,7 @@ const Skills = () => {
 
     return (
         <div className="container env">
-            <h3>Here are some technologies and tools I work with:</h3>
+            <h5>Here are some technologies and tools I work with:</h5>
             <ImageList cols={6}>
                 {itemData.map((item) => (
                     <ImageListItem sx={{width: 60}} key={item.img}>

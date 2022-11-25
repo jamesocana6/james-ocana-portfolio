@@ -16,6 +16,23 @@
     --theme-spo-table-background: rgb(85, 146, 62); 
 }
 
+
+@font-face {
+    font-family: "Dream Orphans";
+    src: url("./dream\ orphans\ bd.otf");
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg)}
+    2% { transform: rotate(3deg)}
+    4% { transform: rotate(0deg)}
+    6% { transform: rotate(-3deg)}
+    8% { transform: rotate(0deg)}
+    10% { transform: rotate(3deg)}
+    12% { transform: rotate(0deg)}
+    14% { transform: rotate(-3deg)}
+    16% { transform: rotate(0deg)}
+}
 @keyframes themeChangeBackground {
     0% {background-position: 0% 0%}
     50% {background-position: 50% 50%;}
@@ -53,6 +70,9 @@
 }
 
 /* OVERLAYS */
+.shake {
+    animation: shake 2s linear infinite;
+}
 .footer {
     position: sticky;
     bottom: 0;
@@ -105,7 +125,7 @@
     font-weight: 600;
     padding: 7px;
 }
-.themeSwitch {
+.themeSwitch, .themeSwitcher {
     margin: 2px;
     padding: 2px;
     text-align: center;
@@ -147,15 +167,23 @@ h3 {
     text-align: center;
     font-size: 40px;
 }
-.themeSwitch > .env {
+.themeSwitch:hover {
+    font-size: 20px;
+}
+.themeSwitch.env {
     cursor: pointer;
     background: linear-gradient(56deg,rgba(87,168,255,1) 0%, rgba(19,60,120,.75) 50%, rgba(38, 6, 88, .75) 100%);
 }
-.themeSwitch > .gam {
+.themeSwitch.gam {
     cursor: pointer;
     background-color: var(--theme-gam-background);
 }
-.themeSwitch > .spo {
+.themeSwitch.spo {
+    cursor: pointer;
+    background-color: var(--theme-spo-background);
+    color: white;
+}
+.themeSwitch.coo {
     cursor: pointer;
     background-color: var(--theme-spo-background);
     color: white;
@@ -318,12 +346,18 @@ h3 {
     padding-bottom: 5px;
     padding-right: 15px;
     padding-top: 20px;
+    background-color: rgba(238, 238, 238, 0.9);
+    color: black;
+}
+.input-field > label {
+    color: black;
+    font-size: 20px;
 }
 .input-field {
     margin: 5px 0px;
 }
-.input-field > i {
-    color: black;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dream Orphans";
 }
 
 /* ////// */
@@ -390,6 +424,9 @@ body.env {
     background-size: contain;
     background-repeat: repeat-x;
     height: 150px;
+}
+.btn.env {
+    background: var(--theme-env-background);
 }
 
 /* GAM */

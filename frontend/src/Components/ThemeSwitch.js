@@ -10,7 +10,9 @@ const ThemeSwitch = () => {
         let body = document.querySelectorAll("body");
         let floating = document.querySelectorAll("div.floating");
         let navbar = document.querySelectorAll("div#nav-bar");
-        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating, ...navbar]
+        let button1 = document.querySelectorAll("button.btn");
+        let button2 = document.querySelectorAll("a.btn");
+        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating, ...navbar, ...button1, ...button2]
         console.log(elements);
         console.log(event.target.classList[1]);
         elements.forEach(element => {
@@ -29,12 +31,13 @@ const ThemeSwitch = () => {
 
     return(
         <div>
-            <ul className="themeSwitch" onClick={handleClick}>OUTSIDE OF CODING, I ENJOY: <span className="shake">(CLICK ON ONE OF THE WORDS!!)</span>
+            <ul className="themeSwitcher" onClick={handleClick}>OUTSIDE OF CODING, I ENJOY: 
                 <li className="themeSwitch env">NATURE</li>
                 <li className="themeSwitch gam">VIDEO GAMES</li>
                 <li className="themeSwitch spo">SPORTS</li>
                 <li className="themeSwitch coo">COOKING</li>
             </ul>
+            <div className="shake">(TRY CLICKING ONE OF THE WORDS ABOVE!)</div>
         </div>
     )
 }
