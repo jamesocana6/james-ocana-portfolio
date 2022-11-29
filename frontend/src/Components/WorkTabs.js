@@ -6,7 +6,7 @@ const WorkTabs = ({ experience, setTab }) => {
     } 
     let tabs = experience.map((e, idx) => {
         return (
-            <span idx={idx} onClick={handleClick} className="work-tab" key={"tab"+idx}>{e.company}</span>
+            <span idx={idx} onClick={handleClick} className="work-tab env" key={"tab"+idx}>{e.company}</span>
         )
     })
     return (

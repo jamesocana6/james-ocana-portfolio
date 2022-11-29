@@ -5,7 +5,7 @@ import WorkSection from "../Components/WorkSection";
 const AboutPage = () => {
     return(
         <div id="about-me">
-            <h3>ABOUT ME</h3>
+            <h3 className="env">ABOUT ME</h3>
             <p>I'm a software engineer with a strong growth mindset. 
                 I love to stay curious and I like to keep my code clean and dry. 
                 Recently, I graduated from General Assembly’s software engineering bootcamp. 

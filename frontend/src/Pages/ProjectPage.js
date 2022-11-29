@@ -62,7 +62,7 @@ const ProjectPage = () => {
 
     return(
         <div id="projects-page">
-            <h3>MY PROJECTS</h3>
+            <h3 className="env" >MY PROJECTS</h3>
             <Project projects={projects}/>
         </div>
     )

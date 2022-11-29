@@ -3,8 +3,7 @@
     --theme-env-footer: url("./trees-no-holes.png");
     /* ////////////////////////////////////////////////// */
     --theme-gam-background: rgba(0, 164, 234, 0.9);
-    --theme-gam-project-hover: rgb(134, 98, 68);
-    --theme-gam-table-background: rgb(85, 146, 62);
+    --theme-gam-hover: linear-gradient(90deg, rgba(0,255,18,.8) 10%, rgba(255,0,0,.8) 90%);
     --theme-gam-footer: url("./mario-map.png");
     /* ////////////////////////////////////////////////// */
     --theme-spo-background: rgba(70, 70, 70, 0.9);
@@ -12,10 +11,14 @@
     --theme-spo-table-background: rgb(85, 146, 62); 
 }
 
-
 @font-face {
     font-family: "Dream Orphans";
     src: url("./dream\ orphans\ bd.otf");
+}
+
+@font-face {
+    font-family: "Gaming";
+    src: url("./Retro\ Gaming.ttf");
 }
 
 @keyframes shake {
@@ -39,6 +42,10 @@
     100% {color: white}
 } 
 @keyframes themeChangeFooter {
+    0% {translate: 0 150px}
+    100% {translate: 0 10px}
+} 
+@keyframes themeChangeFooter2 {
     0% {translate: 0 150px}
     100% {translate: 0 10px}
 } 
@@ -165,8 +172,10 @@ h3 {
 }
 .themeSwitch:hover {
     font-size: 20px;
+    box-shadow: 1px 1px 10px black;
 }
 .themeSwitch.env {
+    color: white;
     cursor: pointer;
     background: linear-gradient(56deg,rgba(87,168,255,1) 0%, rgba(19,60,120,.75) 50%, rgba(38, 6, 88, .75) 100%);
 }
@@ -364,15 +373,15 @@ h3 {
 .input-field {
     margin: 5px 0px;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Dream Orphans";
-}
 
 /* ////// */
 /* THEMES */
 /* ////// */
 
 /* ENV */
+h1.env, h2.env, h3.env, h4.env, h5.env, h6.env {
+    font-family: "Dream Orphans";
+}
 .floating1.env, .floating2.env, .floating3.env {
     background-image: url("./bird1.png"); 
 }
@@ -401,15 +410,15 @@ body.env {
     animation: themeChangeBackground 15s ease infinite alternate, themeChangeFont 3s ease 1;
     height: 100hv;
 }
-.work-panel {
+.work-panel.env {
     /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
     background: rgba(1,1,1,0.5);
 }
-.work-tabs {
+.work-tabs.env {
     /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
     background: rgba(1,1,1,0.5);
 }
-.work-tab:hover {
+.work-tab.env:hover {
     background: linear-gradient(90deg, rgba(200, 200, 200, 0) 0%, rgba(19, 54, 22, .5) 30%, rgba(19, 54, 22, .5) 70%, rgba(200, 200, 200, 0) 100%);
 }
 .project-action.env > a:hover {
@@ -438,6 +447,9 @@ body.env {
 }
 
 /* GAM */
+h1.gam, h2.gam, h3.gam, h4.gam, h5.gam, h6.gam {
+    font-family: "Gaming";
+}
 body.gam {
     background: var(--theme-gam-background);
 }
@@ -446,7 +458,8 @@ body.gam {
     background-size: cover;
     background-repeat: repeat-x;
     height: 175px;
-    translate: 0 20px;
+    translate: 0 10px;
+    animation: themeChangeFooter2 3s ease 1;
 }
 .floating1.gam {
     background-image: url("./cloud1.png"); 
@@ -472,6 +485,43 @@ body.gam {
     top: 55%;
     animation: floatMove 15s linear infinite;
 }
+#nav-bar.gam > a:hover {
+    background: var(--theme-gam-hover);
+}
+.work-panel.gam {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(150, 150, 150, 0.5);
+}
+.work-tabs.gam {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(150, 150, 150, 0.5);
+}
+.work-tab.gam:hover {
+    background: var(--theme-gam-hover);
+}
+.project-action.gam > a:hover {
+    background: var(--theme-gam-hover);
+}
+.project-action.gam > a {
+    font-family: "Gaming";
+    font-size: 14px;
+}
+.project-skill.gam {
+    background: linear-gradient(90deg, rgba(255, 242, 1, 0.9) 0%, rgba(255,255,255,0.9) 100%);
+    color: black;
+}
+.project-panel.gam {
+    background: linear-gradient(90deg, rgba(214, 214, 214, 0.1) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.5) 70%, rgba(214, 214, 214, 0.1) 100%);
+}
+.project-content.gam {
+    background: linear-gradient(90deg, rgba(210, 210, 210, 0.5) 0%, rgba(150, 150, 150, 0.9) 30%, rgba(150, 150, 150, 0.9) 70%, rgba(210, 210, 210, 0.5) 100%);
+}
+.btn.gam {
+    background: rgba(0, 199, 13, 0.8);
+    font-family: "Gaming";
+}
+
+
 
 /* ///////////// */
 /* MEDIA QUERIES */

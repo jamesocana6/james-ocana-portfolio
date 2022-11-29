@@ -4,17 +4,30 @@ const ThemeSwitch = () => {
     function handleClick(event) {
         let headers = document.querySelectorAll("h3");
         let projectPanel = document.querySelectorAll("div.project-panel");
+        let projectAction = document.querySelectorAll("div.project-action");
         let projectContent = document.querySelectorAll("div.project-content");
-        let projectSkill = document.querySelectorAll("div.project-skill");
+        let projectSkill = document.querySelectorAll("span.project-skill");
         let footer = document.querySelectorAll("div.footer");
         let body = document.querySelectorAll("body");
         let floating = document.querySelectorAll("div.floating");
         let navbar = document.querySelectorAll("div#nav-bar");
         let button1 = document.querySelectorAll("button.btn");
         let button2 = document.querySelectorAll("a.btn");
-        let elements = [...headers, ...body, ...projectPanel, ...projectContent, ...projectSkill, ...footer, ...floating, ...navbar, ...button1, ...button2]
-        console.log(elements);
-        console.log(event.target.classList[1]);
+        let h1 = document.querySelectorAll("h1");
+        let h2 = document.querySelectorAll("h2");
+        let h3 = document.querySelectorAll("h3");
+        let h4 = document.querySelectorAll("h4");
+        let h5 = document.querySelectorAll("h5");
+        let h6 = document.querySelectorAll("h6");
+        let workPanel = document.querySelectorAll("div.work-panel");
+        let workTabs = document.querySelectorAll("div.work-tabs");
+        let workTab = document.querySelectorAll("span.work-tab");
+        let elements = [...headers, ...body, ...projectPanel, 
+            ...projectContent, ...projectSkill, ...footer, 
+            ...floating, ...navbar, ...button1, ...button2,
+            ...h1, ...h2, ...h3, ...h4, ...h5, ...h6,    
+            ...workPanel, ...workTabs, ...workTab, ...projectAction,
+        ]
         elements.forEach(element => {
             if (element.classList.contains("env")) {
                 element.classList.remove("env");
