@@ -4,8 +4,10 @@ const Project = ({ projects }) => {
     let allProjects = projects.map((p, idx) => {
         return (
             <div className="project-panel env" key={idx}>
-                <div className="project-img env">
-                    <img src={p.picture} />
+                <div className="project-thumb env">
+                    <video src={p.thumb} autoplay="true" muted loop/>
+
+                    {/* <img src={p.thumb} /> */}
                 </div>
                 <div className="project-content env">
                     <span className="project-title env">{p.project}</span>
@@ -22,7 +24,8 @@ const Project = ({ projects }) => {
                     </div>
                     <div className="project-action env">
                         <a href={p.github} target="_blank">Github</a>
-                        <a href={p.link} target="_blank">Live Link</a>
+                        <a href={p.demo} target="_blank">Demo</a>
+                        <a href={p.link} target="_blank">App</a>
                     </div>
                     </div>
                 </div>

@@ -1,9 +1,5 @@
 :root {
     --theme-env-background: linear-gradient(45deg, rgba(95, 125, 95, 0.9) 0%, rgba(19, 54, 22, .9) 100%);
-    --theme-env-project-hover: rgba(134, 98, 68, 0.5);
-    --theme-env-project-panels:  rgb(70, 70, 70);
-    --theme-env-table-background: rgb(70, 70, 70);
-    --theme-env-table-accent: rgb(60, 60, 60);
     --theme-env-footer: url("./trees-no-holes.png");
     /* ////////////////////////////////////////////////// */
     --theme-gam-background: rgba(0, 164, 234, 0.9);
@@ -219,7 +215,10 @@ h3 {
     width: 34vw;
     overflow: hidden;
 }
-.project-img > img {
+.project-panel:hover {
+    box-shadow: 10px 10px 10px black;
+}
+/* .project-img > img {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -228,6 +227,15 @@ h3 {
     max-height: 200px;
     object-fit: contain;
     width: 34vw;
+} */
+.project-thumb > video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
+    object-fit: contain;
+    width: 34vw;
+    min-height: 200px;
 }
 .project-title {
     display: block;
@@ -257,11 +265,11 @@ h3 {
     display: flex;
     margin-top: 10px;
     border-top: 1px solid black;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .project-action > a {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0.5rem 3rem;
 }
@@ -437,7 +445,7 @@ body.gam {
     background: var(--theme-gam-footer);
     background-size: cover;
     background-repeat: repeat-x;
-    height: 150px;
+    height: 175px;
     translate: 0 20px;
 }
 .floating1.gam {
