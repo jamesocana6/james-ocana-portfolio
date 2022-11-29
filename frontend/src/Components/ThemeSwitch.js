@@ -33,9 +33,9 @@ const ThemeSwitch = () => {
         <div>
             <ul className="themeSwitcher" onClick={handleClick}>OUTSIDE OF CODING, I ENJOY: 
                 <li className="themeSwitch env">NATURE</li>
-                <li className="themeSwitch gam">VIDEO GAMES</li>
-                <li className="themeSwitch spo">SPORTS</li>
-                <li className="themeSwitch coo">COOKING</li>
+                <li className="themeSwitch gam">VIDEO GAMES (WIP)</li>
+                <li className="themeSwitch spo">SPORTS (WIP)</li>
+                <li className="themeSwitch coo">COOKING (WIP)</li>
             </ul>
             <div className="shake">(TRY CLICKING ONE OF THE WORDS ABOVE!)</div>
         </div>
