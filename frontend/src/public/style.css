@@ -1,10 +1,14 @@
 :root {
     --theme-env-background: linear-gradient(45deg, rgba(95, 125, 95, 0.9) 0%, rgba(19, 54, 22, .9) 100%);
-    --theme-env-footer: url("./trees-no-holes.png");
+    --theme-env-footer: url("./footer/trees-no-holes.png");
     /* ////////////////////////////////////////////////// */
     --theme-gam-background: rgba(0, 164, 234, 0.9);
     --theme-gam-hover: linear-gradient(90deg, rgba(0,255,18,.8) 10%, rgba(255,0,0,.8) 90%);
-    --theme-gam-footer: url("./mario-map.png");
+    --theme-gam-footer: url("./footer/mario-map.png");
+    /* ////////////////////////////////////////////////// */
+    --theme-coo-background: rgba(218, 220, 199, 0.9);
+    --theme-coo-hover: linear-gradient(90deg, rgba(0,255,18,.8) 10%, rgba(255,0,0,.8) 90%);
+    --theme-coo-footer: url("./footer/mario-map.png");
     /* ////////////////////////////////////////////////// */
     --theme-spo-background: rgba(70, 70, 70, 0.9);
     --theme-spo-project-hover: rgb(134, 98, 68);
@@ -13,12 +17,15 @@
 
 @font-face {
     font-family: "Dream Orphans";
-    src: url("./dream\ orphans\ bd.otf");
+    src: url("./fonts/dream\ orphans\ bd.otf");
 }
-
 @font-face {
     font-family: "Gaming";
-    src: url("./Retro\ Gaming.ttf");
+    src: url("./fonts/Retro\ Gaming.ttf");
+}
+@font-face {
+    font-family: "Food";
+    src: url("./fonts/Foodlist-Regular.ttf");
 }
 
 @keyframes shake {
@@ -58,14 +65,21 @@
     100% {translate: 0 0}
 } 
 @keyframes birdFlap {
-    0% {background-image: url("./bird2.png")}
-    50% {background-image: url("./bird2.png")}
-    100% {background-image: url("./bird1.png")}
+    0% {background-image: url("./floater/bird2.png")}
+    50% {background-image: url("./floater/bird2.png")}
+    100% {background-image: url("./floater/bird1.png")}
 } 
 @keyframes floatMove {
     0% {translate: 103vw 0}
     70% {translate: -10vw 0}
     100% {translate: -20vw 0}
+} 
+@keyframes floatAppear1 {
+    50% {opacity: 100;}
+    50% {transform: scale(2) rotate(360deg);}
+    100%{transform: scale(1) rotate(720deg);}   
+} 
+@keyframes floatAppear2 {
 } 
 @keyframes hoverPanel {
     0% {translate: 0 100%;}
@@ -174,6 +188,10 @@ h3 {
     font-size: 20px;
     box-shadow: 1px 1px 10px black;
 }
+.themeSwitcher.wip > .themeSwitch:hover {
+    font-size: unset;
+    box-shadow: unset;
+}
 .themeSwitch.env {
     color: white;
     cursor: pointer;
@@ -190,8 +208,8 @@ h3 {
 }
 .themeSwitch.coo {
     cursor: pointer;
-    background-color: var(--theme-spo-background);
-    color: white;
+    background-color: var(--theme-coo-background);
+    color: black;
 }
 .contact-page {
     text-align: center;
@@ -383,7 +401,7 @@ h1.env, h2.env, h3.env, h4.env, h5.env, h6.env {
     font-family: "Dream Orphans";
 }
 .floating1.env, .floating2.env, .floating3.env {
-    background-image: url("./bird1.png"); 
+    background-image: url("./floater/bird1.png"); 
 }
 .floating1.env {
     left: 0;
@@ -462,7 +480,7 @@ body.gam {
     animation: themeChangeFooter2 3s ease 1;
 }
 .floating1.gam {
-    background-image: url("./cloud1.png"); 
+    background-image: url("./floater/cloud1.png"); 
     left: 0;
     height: 100px;
     width: 100px;
@@ -470,7 +488,7 @@ body.gam {
     animation: floatMove 15s 2s linear infinite;
 }
 .floating2.gam {
-    background-image: url("./cloud2.png"); 
+    background-image: url("./floater/cloud2.png"); 
     left: 0;
     height: 100px;
     width: 100px;
@@ -478,7 +496,7 @@ body.gam {
     animation: floatMove 15s 1s linear infinite;
 }
 .floating3.gam {
-    background-image: url("./cloud3.png"); 
+    background-image: url("./floater/cloud3.png"); 
     left: 0;
     height: 100px;
     width: 100px;
@@ -521,6 +539,68 @@ body.gam {
     font-family: "Gaming";
 }
 
+/* COO */
+h1.coo, h2.coo, h3.coo, h4.coo, h5.coo, h6.coo {
+    font-family: "Food";
+}
+body.coo {
+    background: var(--theme-coo-background);
+}
+.floating1.coo {
+    background-image: url("./floater/cooking-broc.png"); 
+    left: 20vw;
+    opacity: 0;
+    height: 100px;
+    width: 100px;
+    top: 50vh;
+    animation: floatAppear1 5s linear infinite, floatAppear2 3s linear infinite;
+}
+.floating2.coo {
+    background-image: url("./floater/cooking-chic.png"); 
+    left: 0;
+    height: 100px;
+    width: 100px;
+    top: 45%;
+    animation: floatMove 15s 1s linear infinite;
+}
+.floating3.coo {
+    background-image: url("./floater/cooking-egg.png"); 
+    left: 10vw;
+    height: 100px;
+    width: 100px;
+    top: 55vh;
+    animation: floatMove 15s linear infinite;
+}
+#nav-bar.coo > a:hover {
+    background: var(--theme-coo-hover);
+}
+.work-panel.coo {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(150, 150, 150, 0.5);
+}
+.work-tabs.coo {
+    /* background: linear-gradient(90deg, rgba(150, 150, 150, 0.5) 0%, rgba(70, 70, 70, 0.9) 30%, rgba(70, 70, 70, 0.9) 70%, rgba(150, 150, 150, 0.5) 100%); */
+    background: rgba(150, 150, 150, 0.5);
+}
+.work-tab.coo:hover {
+    background: var(--theme-coo-hover);
+}
+.project-action.coo > a:hover {
+    background: var(--theme-coo-hover);
+}
+.project-skill.coo {
+    background: linear-gradient(90deg, rgba(255, 242, 1, 0.9) 0%, rgba(255,255,255,0.9) 100%);
+    color: black;
+}
+.project-panel.coo {
+    background: linear-gradient(90deg, rgba(214, 214, 214, 0.1) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.5) 70%, rgba(214, 214, 214, 0.1) 100%);
+}
+.project-content.coo {
+    background: linear-gradient(90deg, rgba(210, 210, 210, 0.5) 0%, rgba(150, 150, 150, 0.9) 30%, rgba(150, 150, 150, 0.9) 70%, rgba(210, 210, 210, 0.5) 100%);
+}
+.btn.coo {
+    background: rgba(0, 199, 13, 0.8);
+}
 
 
 /* ///////////// */
