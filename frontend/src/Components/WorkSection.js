@@ -9,7 +9,7 @@ const WorkSection = () => {
     let experience = [
         {
             company: "Underwriters' Laboratories",
-            role: "Associate Project Engineer",
+            role: "Project Engineer",
             dates: "April 2022 - July 2022",
             location: "Melville, NY",
             responsibilities: [
@@ -21,7 +21,7 @@ const WorkSection = () => {
         },
         {
             company: "Underwriters' Laboratories",
-            role: "Project Engineer",
+            role: "Associate Project Engineer",
             dates: "January 2020 - April 2022",
             location: "Melville, NY",
             responsibilities: [
