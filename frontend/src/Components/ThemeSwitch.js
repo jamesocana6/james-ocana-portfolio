@@ -52,10 +52,10 @@ const ThemeSwitch = () => {
                 <li className="themeSwitch gam">VIDEO GAMES</li>
             </ul>
             <div className="shake">(TRY CLICKING ONE OF THE WORDS ABOVE!)</div>
-            <ul className="themeSwitcher wip" >
+            {/* <ul className="themeSwitcher wip" >
                 <li className="themeSwitch coo">COOKING (WIP)</li>
                 <li className="themeSwitch spo">SPORTS (WIP)</li>
-            </ul>
+            </ul> */}
         </div>
     )
 }
