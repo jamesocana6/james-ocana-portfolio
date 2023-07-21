@@ -8,6 +8,19 @@ const WorkSection = () => {
     const [tab, setTab] = useState(0)
     let experience = [
         {
+            company: "Major League Baseball",
+            role: "Software Engineering Intern",
+            dates: "June 2023 - Present",
+            location: "New York, NY",
+            responsibilities: [
+                `- Enhanced accessibility, styling, and resolved bugs for pages and widgets used during the MLB Draft.`, 
+                `- Presented changes and new features in technical demos for stakeholders, project managers, and engineering teams.`,
+                `- Created tickers for user stories and bug fixes identified during testing and mock events.`,
+                `- Developed and implemented a store widget for Minor League team websites using Shopify BuyButton SDK.`, 
+                `- Maintained and wrote documentation for engineers and stakeholders for new features added to the websites.`,
+                ]
+        },
+        {
             company: "Underwriters' Laboratories",
             role: "Project Engineer",
             dates: "April 2022 - July 2022",
@@ -44,28 +57,28 @@ const WorkSection = () => {
                 `- Performed maintenance and inspections on injection molding, compression molding, CNC machines, and cooling units.`, 
             ]
         },
-        {
-            company: "Wesco Technologies Inc.",
-            role: "Service Engineer",
-            dates: "May 2018 - April 2019",
-            location: "Long Island City, NY",
-            responsibilities: [
-                `- Programmed controllers to correct the feed rates of chemicals into cooling tower systems to reduce corrosion within the pipes and equipment and ensuring that the systems are in compliance with EHS requirements.`,
-                `- Instructed building engineers and facilities engineers on how to maintain their cooling water systems with a Maintenance Program and Plan (Maintenance Manual).`, 
-                `- Performed routine maintenance inspections on client cooling towers.`, 
-            ]
-        },
-        {
-            company: "Wesco Technologies Inc.",
-            role: "Intern",
-            dates: "August 2016 - May 2018",
-            location: "Long Island City, NY",
-            responsibilities: [
-                `- Shadowed engineers as they serviced cooling towers and observed the communication between facilities staff.`,
-                `- Constructed and organized documentation and certificates for clients’ cooling towers`, 
-                `- Cleaned office files and computer documentation to reduce clutter.`, 
-            ]
-        },
+        // {
+        //     company: "Wesco Technologies Inc.",
+        //     role: "Service Engineer",
+        //     dates: "May 2018 - April 2019",
+        //     location: "Long Island City, NY",
+        //     responsibilities: [
+        //         `- Programmed controllers to correct the feed rates of chemicals into cooling tower systems to reduce corrosion within the pipes and equipment and ensuring that the systems are in compliance with EHS requirements.`,
+        //         `- Instructed building engineers and facilities engineers on how to maintain their cooling water systems with a Maintenance Program and Plan (Maintenance Manual).`, 
+        //         `- Performed routine maintenance inspections on client cooling towers.`, 
+        //     ]
+        // },
+        // {
+        //     company: "Wesco Technologies Inc.",
+        //     role: "Intern",
+        //     dates: "August 2016 - May 2018",
+        //     location: "Long Island City, NY",
+        //     responsibilities: [
+        //         `- Shadowed engineers as they serviced cooling towers and observed the communication between facilities staff.`,
+        //         `- Constructed and organized documentation and certificates for clients’ cooling towers`, 
+        //         `- Cleaned office files and computer documentation to reduce clutter.`, 
+        //     ]
+        // },
     ]
 
     return(

@@ -10,11 +10,11 @@ const ProjectPage = () => {
     let projects = [
         {
             project: "Numero",
-            link: "https://youtu.be/FcF4q_hB_G4",
+            link: "https://numerogame.com",
             demo: "https://youtu.be/FcF4q_hB_G4",
             github: "https://github.com/jamesocana6/numero-game",
-            description: "Android studio math game to practice mental math and pattern recognition.",
-            technologies: ["Java", "SQLlite", "Android Studio", "XML"],
+            description: "Math game to practice mental math and pattern recognition.",
+            technologies: ["JavaScript", "React Native", "Node", "Express", ],
             picture: "https://i.imgur.com/uULfVGm.png",
             thumb: thumb1,
         },
